@@ -136,7 +136,6 @@ Edit `assets/css/core/theme-vars.css` to customize colors:
 - `layouts/publications/list.html` - Publications listing
 - `layouts/blog/list.html` - Blog listing
 
-## Features from al-folio
 
 ✅ News table with dates
 ✅ Publications list with abstracts (expandable)
