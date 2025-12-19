@@ -1,7 +1,5 @@
 # Academic Theme Setup Guide
 
-This guide explains the new academic theme inspired by [Carolina Carreira's website](https://carolinacarreira.github.io/) with features from [al-folio](https://alshedivat.github.io/al-folio/).
-
 ## Features
 
 ✅ **Light/Dark Mode Toggle** - Enabled in the header
