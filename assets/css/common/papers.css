@@ -1,0 +1,28 @@
+/* Custom styles for the Papers section */
+
+.papers-header {
+    /* Add custom styling for the papers page header */
+    margin-bottom: calc(var(--gap) * 1.5);
+}
+
+.paper-entry {
+    /* Custom styles for paper entries on the listing page */
+    /* You can override styles from post-entry.css here */
+}
+
+.paper-entry:hover {
+    /* Custom hover effect for paper entries */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Example: Make paper entries have a different border color */
+.paper-entry {
+    border-left: 4px solid var(--darkcolor);
+}
+
+/* Example: Add custom styling for paper metadata */
+.paper-entry .entry-footer {
+    /* Custom footer styling for papers */
+}
+

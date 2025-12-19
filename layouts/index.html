@@ -1,0 +1,163 @@
+{{- define "main" }}
+
+{{- if (and site.Params.profileMode.enabled .IsHome) }}
+<div class="academic-home">
+  {{- partial "index_profile.html" . }}
+  
+  {{- /* News Section */}}
+  {{- if site.Params.news.enabled }}
+  <section class="news-section">
+    <h2>{{ site.Params.news.title | default "News" }}</h2>
+    <table class="news-table">
+      {{- range site.Params.news.items }}
+      <tr>
+        <td class="news-date">{{ .date }}</td>
+        <td class="news-content">{{ .content | markdownify }}</td>
+      </tr>
+      {{- end }}
+    </table>
+  </section>
+  {{- end }}
+  
+  {{- /* Selected Publications Section */}}
+  {{- if site.Params.publications.enabled }}
+  <section class="publications-section">
+    <h2>{{ site.Params.publications.title | default "Selected Publications" }}</h2>
+    <ol class="publications-list">
+      {{- $publications := where site.RegularPages "Section" "publications" }}
+      {{- $selected := where $publications "Params.selected" true }}
+      {{- if gt (len $selected) 0 }}
+        {{- range first site.Params.publications.limit $selected }}
+        <li class="publication-item">
+          <div class="publication-title">
+            <strong>{{ .Title }}</strong>
+          </div>
+          <div class="publication-authors">
+            {{- if .Params.author }}
+              {{- $authors := .Params.author }}
+              {{- if reflect.IsSlice $authors }}
+                {{- range $index, $author := $authors }}
+                  {{- if eq $index (sub (len $authors) 1) }}
+                    {{- if eq $index 0 }}
+                      <em>{{ $author }}</em>
+                    {{- else }}
+                      and <em>{{ $author }}</em>
+                    {{- end }}
+                  {{- else }}
+                    {{- if gt $index 0 }}, {{ end }}
+                    {{- if eq $index 0 }}
+                      <em>{{ $author }}</em>
+                    {{- else }}
+                      <em>{{ $author }}</em>
+                    {{- end }}
+                  {{- end }}
+                {{- end }}
+              {{- else }}
+                <em>{{ $authors }}</em>
+              {{- end }}
+            {{- end }}
+          </div>
+          <div class="publication-venue">
+            {{- if .Params.editPost.Text }}
+            <em>{{ .Params.editPost.Text }}</em>
+            {{- end }}
+            {{- if .Params.date }}
+            {{ .Date.Format site.Params.DateFormat }}
+            {{- end }}
+          </div>
+          {{- if .Params.description }}
+          <div class="publication-abstract">
+            <details>
+              <summary>Abs</summary>
+              <p>{{ .Params.description }}</p>
+            </details>
+          </div>
+          {{- end }}
+          <div class="publication-links">
+            {{- if .Params.editPost.URL }}
+            <a href="{{ .Params.editPost.URL }}" target="_blank" rel="noopener">PDF</a>
+            {{- end }}
+            {{- if .Permalink }}
+            <a href="{{ .Permalink }}">More</a>
+            {{- end }}
+          </div>
+        </li>
+        {{- end }}
+      {{- else }}
+        {{- range first site.Params.publications.limit $publications }}
+        <li class="publication-item">
+          <div class="publication-title">
+            <strong>{{ .Title }}</strong>
+          </div>
+          <div class="publication-authors">
+            {{- if .Params.author }}
+              {{- $authors := .Params.author }}
+              {{- if reflect.IsSlice $authors }}
+                {{- range $index, $author := $authors }}
+                  {{- if eq $index (sub (len $authors) 1) }}
+                    {{- if eq $index 0 }}
+                      <em>{{ $author }}</em>
+                    {{- else }}
+                      and <em>{{ $author }}</em>
+                    {{- end }}
+                  {{- else }}
+                    {{- if gt $index 0 }}, {{ end }}
+                    <em>{{ $author }}</em>
+                  {{- end }}
+                {{- end }}
+              {{- else }}
+                <em>{{ $authors }}</em>
+              {{- end }}
+            {{- end }}
+          </div>
+          <div class="publication-venue">
+            {{- if .Params.editPost.Text }}
+            <em>{{ .Params.editPost.Text }}</em>
+            {{- end }}
+            {{- if .Params.date }}
+            {{ .Date.Format site.Params.DateFormat }}
+            {{- end }}
+          </div>
+          {{- if .Params.description }}
+          <div class="publication-abstract">
+            <details>
+              <summary>Abs</summary>
+              <p>{{ .Params.description }}</p>
+            </details>
+          </div>
+          {{- end }}
+          <div class="publication-links">
+            {{- if .Params.editPost.URL }}
+            <a href="{{ .Params.editPost.URL }}" target="_blank" rel="noopener">PDF</a>
+            {{- end }}
+            {{- if .Permalink }}
+            <a href="{{ .Permalink }}">More</a>
+            {{- end }}
+          </div>
+        </li>
+        {{- end }}
+      {{- end }}
+    </ol>
+  </section>
+  {{- end }}
+  
+  {{- /* Latest Blog Posts */}}
+  {{- if site.Params.blog.enabled }}
+  <section class="blog-section">
+    <h2>{{ site.Params.blog.title | default "Latest Posts" }}</h2>
+    <ul class="blog-list">
+      {{- $blogPosts := where site.RegularPages "Section" "blog" }}
+      {{- range first site.Params.blog.limit $blogPosts }}
+      <li class="blog-item">
+        <span class="blog-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
+</div>
+{{- end }}
+
+{{- end }}{{- /* end main */ -}}
+

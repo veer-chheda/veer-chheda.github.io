@@ -1,0 +1,26 @@
+{{- define "main" }}
+
+<article class="about-page">
+  <header class="about-header">
+    {{- if .Title }}
+    <h1>{{ .Title }}</h1>
+    {{- end }}
+  </header>
+
+  {{- if .Content }}
+  <div class="about-content post-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+  </div>
+  {{- end }}
+
+  {{- /* Social Icons */}}
+  {{- if site.Params.socialIcons }}
+  <div class="about-social">
+    {{- partial "social_icons.html" -}}
+  </div>
+  {{- end }}
+</article>
+
+{{- end }}{{- /* end main */ -}}

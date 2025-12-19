@@ -4,11 +4,11 @@
     justify-content: left;
 }
 .main .profile {
-    align-items: center;
-    min-height: calc(100vh - var(--footer-height) - (var(--gap) * 2));
+    align-items: flex-start;
+    min-height: auto;
     font-size: var(--homesize);
     line-height: var(--lineheight);
-    padding: var(--gap);
+    padding: 0;
 }
 
 .profile .profile_inner {
@@ -19,29 +19,46 @@
 }
 
 .profile .profile_inner h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
 }
 
 .profile img {
-    border-radius: 50%;
-    border: 1px solid var(--tertiary);
+    border-radius: 0;
+    border: none;
+    width: 200px;
+    height: auto;
 }
 
 .buttons {
     flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 .button {
     background: var(--tertiary);
     border-radius: var(--radius);
     margin: 6px 12px 6px 0px;
-    padding: 10px;
+    padding: 8px 16px;
+    transition: all 0.2s ease;
 }
 
 .button-inner {
-    padding: 0 8px;
+    padding: 0;
 }
 
 .button:hover {
+    background: var(--darkcolor);
+    color: var(--theme);
+    transform: translateY(-1px);
+}
+
+.dark .button {
+    background: var(--tertiary);
+}
+
+.dark .button:hover {
     background: var(--lightcolor);
+    color: var(--primary);
 }
