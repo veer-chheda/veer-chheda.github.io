@@ -1,28 +1,180 @@
-/* Custom styles for the Papers section */
+/* Publications Section - Minimalistic Design */
 
-.papers-header {
-    /* Add custom styling for the papers page header */
-    margin-bottom: calc(var(--gap) * 1.5);
+.publications-entries {
+    list-style: none;
+    counter-reset: publication-counter;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--gap) * 1.5);
 }
 
-.paper-entry {
-    /* Custom styles for paper entries on the listing page */
-    /* You can override styles from post-entry.css here */
+.publication-item-wrapper {
+    counter-increment: publication-counter;
+    position: relative;
+    padding-left: calc(var(--gap) * 2.5);
 }
 
-.paper-entry:hover {
-    /* Custom hover effect for paper entries */
+.publication-item-wrapper::before {
+    content: counter(publication-counter);
+    position: absolute;
+    left: 0;
+    top: var(--gap);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--darkcolor);
+    line-height: 1.5rem;
+}
+
+.dark .publication-item-wrapper::before {
+    color: var(--lightcolor);
+}
+
+.publication-entry {
+    position: relative;
+    margin-bottom: 0;
+    padding: var(--gap);
+    background: var(--entry);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.publication-entry:hover {
+    border-color: var(--darkcolor);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
-/* Example: Make paper entries have a different border color */
-.paper-entry {
-    border-left: 4px solid var(--darkcolor);
+.dark .publication-entry:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
-/* Example: Add custom styling for paper metadata */
-.paper-entry .entry-footer {
-    /* Custom footer styling for papers */
+.publication-entry .entry-header h2 {
+    margin: 0 0 12px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.publication-entry .entry-header h2 a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.publication-entry .entry-header h2 a:hover {
+    color: var(--darkcolor);
+}
+
+.publication-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: var(--secondary);
+    line-height: 1.5;
+}
+
+.publication-entry .entry-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.publication-entry .entry-tags a {
+    color: var(--secondary);
+    text-decoration: none;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--code-bg);
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+}
+
+.publication-entry .entry-tags a:hover {
+    color: var(--primary);
+    background: var(--tertiary);
+}
+
+.dark .publication-entry .entry-tags a {
+    background: var(--code-bg);
+}
+
+.dark .publication-entry .entry-tags a:hover {
+    background: var(--tertiary);
+}
+
+.publication-authors {
+    color: var(--content);
+}
+
+.publication-authors em {
+    font-style: normal;
+}
+
+.publication-venue {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-style: italic;
+}
+
+.publication-venue em {
+    font-style: italic;
+}
+
+.publication-date {
+    font-style: normal;
+    font-weight: 500;
+}
+
+.publication-links {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+
+.publication-link-pdf {
+    color: var(--darkcolor);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 4px;
+    background: var(--code-bg);
+    transition: all 0.2s ease;
+    display: inline-block;
+    border: 1px solid var(--border);
+}
+
+.publication-link-pdf:hover {
+    color: var(--primary);
+    background: var(--tertiary);
+    border-color: var(--darkcolor);
+}
+
+.dark .publication-link-pdf {
+    background: var(--code-bg);
+}
+
+.dark .publication-link-pdf:hover {
+    background: var(--tertiary);
+    border-color: var(--lightcolor);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .publication-entry .entry-header h2 {
+        font-size: 1.25rem;
+    }
+    
+    .publication-meta {
+        font-size: 0.9rem;
+    }
 }
 

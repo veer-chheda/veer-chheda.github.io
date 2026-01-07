@@ -13,6 +13,49 @@
     border-bottom: 1px solid var(--border);
 }
 
+/* About Section */
+.about-section {
+    margin-bottom: calc(var(--gap) * 3);
+    padding-bottom: calc(var(--gap) * 2);
+    border-bottom: 1px solid var(--border);
+    line-height: var(--lineheight);
+}
+
+.about-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: calc(var(--gap) * 1);
+    margin-top: calc(var(--gap) * 1.5);
+    color: var(--primary);
+}
+
+.about-section h2:first-child {
+    margin-top: 0;
+}
+
+.about-section h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: calc(var(--gap) * 0.5);
+    margin-top: calc(var(--gap) * 1.5);
+    color: var(--primary);
+}
+
+.about-section p {
+    margin-bottom: calc(var(--gap) * 0.75);
+    color: var(--content);
+}
+
+.about-section ul {
+    margin-bottom: calc(var(--gap) * 0.75);
+    padding-left: calc(var(--gap) * 1.5);
+    color: var(--content);
+}
+
+.about-section li {
+    margin-bottom: calc(var(--gap) * 0.25);
+}
+
 .academic-home .profile .profile_inner {
     align-items: flex-start;
     gap: 20px;
@@ -269,4 +312,5 @@
         gap: 4px;
     }
 }
+
 

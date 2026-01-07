@@ -17,3 +17,4 @@ Accepted at the 6th Biennial International Conference on Nascent Technologies in
 
 Proposed and benchmarked 4 color space fusion methods (YUV, LAB, HSV, direct RGB baseline) for integrating RGB-NIR images on the IDD-AW dataset with 5,000 RGB-NIR image pairs covering four weather conditions (rain, fog, low-light, snow). LAB and YUV fusion yielded the greatest gains in fog and low-light (mIoU up to 30.95, SmIoU up to 22.28) with all fusion approaches preserving real-time inference on edge hardware.
 
+

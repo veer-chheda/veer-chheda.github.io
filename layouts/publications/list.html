@@ -24,57 +24,59 @@
 {{- $pages := $publicationsSection.RegularPages }}
 {{- $paginator := .Paginate $pages }}
 
-<ol class="publications-list full-publications">
+<ol class="publications-entries">
   {{- range $paginator.Pages }}
-  <li class="publication-item">
-    <div class="publication-title">
-      <strong>{{ .Title }}</strong>
-    </div>
-    <div class="publication-authors">
-      {{- if .Params.author }}
-        {{- $authors := .Params.author }}
-        {{- if reflect.IsSlice $authors }}
-          {{- range $index, $author := $authors }}
-            {{- if eq $index (sub (len $authors) 1) }}
-              {{- if eq $index 0 }}
-                <em>{{ $author }}</em>
-              {{- else }}
-                and <em>{{ $author }}</em>
+  <li class="publication-item-wrapper">
+  <article class="post-entry publication-entry">
+    <header class="entry-header">
+      <h2>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </h2>
+      <div class="entry-meta publication-meta">
+        <div class="publication-authors">
+          {{- if .Params.author }}
+            {{- $authors := .Params.author }}
+            {{- if reflect.IsSlice $authors }}
+              {{- range $index, $author := $authors }}
+                {{- if eq $index (sub (len $authors) 1) }}
+                  {{- if eq $index 0 }}
+                    <em>{{ $author }}</em>
+                  {{- else }}
+                    and <em>{{ $author }}</em>
+                  {{- end }}
+                {{- else }}
+                  {{- if gt $index 0 }}, {{ end }}
+                  <em>{{ $author }}</em>
+                {{- end }}
               {{- end }}
             {{- else }}
-              {{- if gt $index 0 }}, {{ end }}
-              <em>{{ $author }}</em>
+              <em>{{ $authors }}</em>
             {{- end }}
           {{- end }}
-        {{- else }}
-          <em>{{ $authors }}</em>
+        </div>
+        <div class="publication-venue">
+          {{- if .Params.editPost.Text }}
+          <em>{{ .Params.editPost.Text }}</em>
+          {{- end }}
+          {{- if .Params.date }}
+          <span class="publication-date">{{ .Date.Format site.Params.DateFormat }}</span>
+          {{- end }}
+        </div>
+        {{- if .Params.tags }}
+        <span class="entry-tags">
+          {{- range .Params.tags }}
+            <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+          {{- end }}
+        </span>
         {{- end }}
-      {{- end }}
-    </div>
-    <div class="publication-venue">
-      {{- if .Params.editPost.Text }}
-      <em>{{ .Params.editPost.Text }}</em>
-      {{- end }}
-      {{- if .Params.date }}
-      {{ .Date.Format site.Params.DateFormat }}
-      {{- end }}
-    </div>
-    {{- if .Params.description }}
-    <div class="publication-abstract">
-      <details>
-        <summary>Abs</summary>
-        <p>{{ .Params.description }}</p>
-      </details>
-    </div>
-    {{- end }}
+      </div>
+    </header>
     <div class="publication-links">
       {{- if .Params.editPost.URL }}
-      <a href="{{ .Params.editPost.URL }}" target="_blank" rel="noopener">PDF</a>
-      {{- end }}
-      {{- if .Permalink }}
-      <a href="{{ .Permalink }}">More</a>
+      <a href="{{ .Params.editPost.URL }}" target="_blank" rel="noopener" class="publication-link-pdf">PDF</a>
       {{- end }}
     </div>
+  </article>
   </li>
   {{- end }}
 </ol>

@@ -17,3 +17,4 @@ Accepted at the 6th Biennial International Conference on Nascent Technologies in
 
 Evaluated zero-shot and fine-tuned English-to-Konkani translation using IndicTrans2 on parallel translation dataset and Swadesh Lists. Achieved highest performance among Devanagari-script Indo-Aryan languages with fine-tuned Marathi translation scores: BLEU-4 (32.95), TER (43.21), chrF3 (72.02), BERTScore (0.888) and semantic similarity (0.868).
 
+

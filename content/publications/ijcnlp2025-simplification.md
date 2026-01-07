@@ -18,3 +18,4 @@ To be published in Findings of IJCNLP-AACL 2025.
 
 Proposed an iterative zero-shot critique-driven framework for simplifying domain-specific definitions using small language models, driven by cognitive accessibility. Used LLM critics to iteratively refine definitions for lay audiences, optimizing clarity, precision, conciseness and relevance. Benchmarked on WIKIDOMAINS dataset with 22k+ definitions, showing gains in BLEU-4, BERTScore, Age-of-Acquisition and Flesch Reading Ease. Human evaluation (18 annotators) and LLM-as-a-judge confirmed significant comprehension gains, especially for non-experts, via personalized refinement.
 
+

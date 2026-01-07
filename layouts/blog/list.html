@@ -33,9 +33,8 @@
         <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
         {{- if .Params.tags }}
         <span class="entry-tags">
-          {{- range $index, $tag := .Params.tags }}
-            {{- if $index }}, {{ end }}
-            <a href="{{ "/tags/" | relLangURL }}{{ $tag | urlize }}">{{ $tag }}</a>
+          {{- range .Params.tags }}
+            <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
           {{- end }}
         </span>
         {{- end }}
@@ -74,4 +73,5 @@
 {{- end }}
 
 {{- end }}{{- /* end main */ -}}
+
 

@@ -17,3 +17,4 @@ Under review at the 8th IEEE International Conference on Emerging Smart Computin
 
 Performed dual-task evaluation of MBTI personality prediction on the MBTI-Bench dataset with 286 text samples using multi-label classification and multi-output regression with traditional ensemble ML models (XGBoost, Random Forest, SVM) and transformer models (BERT, RoBERTa, DeBERTa). Conducted interpretable psycholinguistic analysis with SHAP and Empath lexicon, identifying lexical cues aligned with MBTI dimensions and highlighting distinct linguistic patterns for each personality trait.
 
+
