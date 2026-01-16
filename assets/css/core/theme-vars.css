@@ -9,13 +9,13 @@
     --theme: rgb(235, 235, 235);
     --entry: rgb(235, 235, 235);
     --primary: rgb(30, 30, 30);
-    --secondary: rgb(108, 108, 108);
+    --secondary: rgb(87, 86, 86);
     --tertiary: rgb(214, 214, 214);
     --gray: rgb(165, 165, 165);
     --content: rgb(30, 30, 30);
     --code-block-bg: rgb(28, 29, 33);
     --code-bg: rgb(235, 235, 235);
-    --border: rgb(238, 238, 238);
+    --border: rgb(206, 206, 206);
     --darkcolor: #6a7ba2;
     --lightcolor: #cbd1de;
     --semibold: 500;
@@ -34,7 +34,7 @@
     --theme: rgb(40, 40, 40);
     --entry: rgb(50, 50, 50);
     --primary: rgb(220, 220, 220);
-    --secondary: rgb(160, 160, 160);
+    --secondary: rgb(176, 176, 176);
     --tertiary: rgb(70, 70, 70);
     --content: rgb(200, 200, 200);
     --code-block-bg: rgb(45, 45, 45);

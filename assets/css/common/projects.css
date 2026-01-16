@@ -65,6 +65,7 @@
     color: var(--content);
     line-height: 1.6;
     font-size: 1rem;
+    text-align: justify;
 }
 
 .project-entry .entry-content ul {

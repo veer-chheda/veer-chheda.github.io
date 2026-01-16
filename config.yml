@@ -41,7 +41,7 @@ params:
     ShowBreadCrumbs: false
     ShowCodeCopyButtons: true
     ShowAllPagesInArchive: false
-    MainSections: ["publications", "projects", "blog"]
+    MainSections: ["researchInterests", "publications", "projects", "blog"]
     ShowToc: false
     disableScrollToTop: true
     TocOpen: true
@@ -52,7 +52,7 @@ params:
     profileMode:
           enabled: true
           title: Veer Chheda
-          subtitle: "B.Tech in Computer Science and Engineering (IoT and Cybersecurity with Blockchain Technology) at Dwarkadas J. Sanghvi College of Engineering. Research Intern at IIT Patna. My research focuses on NLP, Computer Vision, and AI, with publications at EMNLP, IJCNLP-AACL, and IEEE conferences."
+          subtitle: "Hi, I am an undergraduate student in Computer Science and Engineering at Dwarkadas J. Sanghvi College of Engineering. I am an aspiring researcher broadly interested in building trustworthy and human-centric AI. Previously, I interned at IIT Patna working on small object detection, hallucination detection and mitigation, and multimodal generation.  You can find a list of my broadly interested research interests below. Feel free to reach out to me :)"
           imageUrl: "picture.jpeg"
           imageWidth: 200
           imageHeight: 200
@@ -77,18 +77,30 @@ params:
       text: "Veer Chheda"
       icon: favicon.ico
       iconHeight: 18
+
+    researchInterests:
+      enabled: true
+      title: "Research Interests"
+      items:
+        - name: "Safety and Social Alignment"
+          content: "**How do we design language models that remain transparent, reliable and bias-free?** I want to work on mechanisms that adapt to different cultures and social contexts by modeling internal representations to ensure transparency and fairness in human-AI interactions."
+        - name: "Model Reasoning"
+          content: "**How can we control and customize reasoning in language models under uncertainty and underspecification to avoid hallucinations, sycophancy and deception?** I want to explore methods for knowledge attribution and steering for inference-time alignment."
+        - name: "User-aware Domain Adaptation"
+          content: "**How can models make complex, domain-specific information accessible to out-of-domain users without losing fidelity?** I am interested in context-aware reasoning and explanation that adapt to human behavior in expert domains like law and healthcare."
     
     # News section configuration
     news:
       enabled: true
       title: "News"
       items:
-        - date: "Aug 2024"
-          content: "Started Research Internship at IIT Patna under Dr. Rajiv Misra and Dr. Sourav Dandapat"
-        - date: "Jun 2024"
-          content: "Started Data Science Internship at Aura IT"
-        - date: "Jul 2023"
-          content: "Appointed Vice Chairperson (Technical) at DJS CodeStars"
+
+        - date: "Dec 2025"
+          content: "I was awarded the D&I subsidy at IJCNLP-AACL 2025! See you at IIT Bombay!"
+        - date: "Oct 2025"
+          content: "Two papers accepted to IJCNLP-AACL 2025!"
+        - date: "Sep 2025"
+          content: "EEA was accepted to the 7th Natural Legal Language Processing Workshop, EMNLP 2025!"
     
     # Publications section configuration
     publications:

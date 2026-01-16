@@ -65,6 +65,7 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 8;
+    text-align: justify;
 }
 
 .entry-footer {

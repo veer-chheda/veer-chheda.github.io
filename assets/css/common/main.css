@@ -4,6 +4,28 @@
     max-width: calc(var(--main-width) + var(--gap) * 2);
     margin: auto;
     padding: var(--gap);
+    text-align: justify;
+}
+
+.main h1,
+.main h2,
+.main h3,
+.main h4,
+.main h5,
+.main h6,
+.main code,
+.main pre,
+.main .page-header,
+.main .post-header {
+    text-align: left;
+}
+
+.main:has(.academic-home) {
+    max-width: 900px;
+}
+
+.main .academic-home {
+    max-width: 100%;
 }
 
 .page-header h1 {

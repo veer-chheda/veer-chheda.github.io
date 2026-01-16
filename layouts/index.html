@@ -11,6 +11,24 @@
     {{- $aboutPage.Content }}
   </section>
   {{- end }}
+
+  {{- /* Research Interests Section */}}
+  {{- if site.Params.researchInterests.enabled }}
+  <section class="research-interests-section">
+    <h2>{{ site.Params.researchInterests.title | default "Research Interests" }}</h2>
+    <div class="research-interests-list">
+      {{- range $index, $item := site.Params.researchInterests.items }}
+      <div class="research-interest-item">
+        <span class="research-interest-number">{{ printf "%d" (add $index 1) }}.</span>
+        <div class="research-interest-content">
+          <strong class="research-interest-title">{{ $item.name }}:</strong>
+          <span class="research-interest-text">{{ $item.content | markdownify }}</span>
+        </div>
+      </div>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
   
   {{- /* News Section */}}
   {{- if site.Params.news.enabled }}

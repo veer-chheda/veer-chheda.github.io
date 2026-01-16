@@ -1,7 +1,7 @@
 ---
 title: "Color Space Fusion for Semantic Segmentation in Indian Adverse Weather Driving Scenes"
-date: 2025-01-01
-author: ["Veer Chheda"]
+date: 2026-01-17
+author: ["Veer Chheda", "Vansh Shah", "Hezal Lopes", "Vishakha Shelke"]
 description: "Proposed and benchmarked 4 color space fusion methods (YUV, LAB, HSV, direct RGB baseline) for integrating RGB-NIR images on the IDD-AW dataset with 5,000 RGB-NIR image pairs covering four weather conditions (rain, fog, low-light, snow). LAB and YUV fusion yielded the greatest gains in fog and low-light (mIoU up to 30.95, SmIoU up to 22.28) with all fusion approaches preserving real-time inference on edge hardware."
 editPost:
   URL: "#"
