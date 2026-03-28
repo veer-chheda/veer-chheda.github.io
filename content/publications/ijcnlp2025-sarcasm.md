@@ -3,19 +3,56 @@ title: "Could you BE more sarcastic? A Cognitive Approach to Bidirectional Sarca
 date: 2025-12-24
 author: ["Veer Chheda", "Avantika Sankhe", "Atharva Sankhe"]
 selected: true
-description: "Introduced a multi-hop chain-of-thought framework for bidirectional sarcasm style transfer, leveraging Theory of Mind. Benchmarked 6 SLMs on sarcasm generation and removal using the MUSTARD dataset (690 dialogues). Evaluated with automatic (BLEU, DialogRPT, SBERT, BERTScore), LLM-as-a-judge and human judgements (5 annotators, 60 cases). Improved metrics by up to 12% over few-shot baselines and won top human rankings across all four style directions. Ranked best in all 4 tasks, with Krippendorff's alpha 0.45, excelling in context, creativity, meaning preservation and sarcasticness."
+description: "Sarcasm is a specific form of ironic speech
+which can often be hard to understand for lan-
+guage models due to its nuanced nature. Recent
+improvements in the ability of such models to
+detect and generate sarcasm motivate us to try a
+new approach to help language models perceive
+sarcasm as a speech style, through a human cog-
+nitive perspective. In this work, we propose a
+multi-hop Chain of Thought (CoT) methodol-
+ogy to understand the context of an utterance
+that follows a dialogue and to perform bidirec-
+tional style transfer on that utterance, leverag-
+ing the Theory of Mind. We use small language
+models (SLMs) due to their cost-efficiency and
+fast response-time. The generated utterances
+are evaluated using both LLM-as-a-judge and
+human evaluation, suitable to the open-ended
+and stylistic nature of the generations. We also
+evaluate scores of automated metrics such as
+DialogRPT, BLEU and SBERT; drawing valu-
+able insights from them that support our evi-
+dence. Based on this, we find that our cognitive
+approach to sarcasm is an effective way for lan-
+guage models to stylistically understand and
+generate sarcasm with better authenticity."
 editPost:
-  URL: "#"
+  URL: "https://aclanthology.org/2025.ijcnlp-srw.22.pdf"
   Text: "Student Research Workshop, IJCNLP-AACL 2025"
-tags: ["NLP", "Sarcasm Detection", "Style Transfer", "IJCNLP-AACL"]
+tags: ["NLP", "Sarcasm Understanding"]
+poster: "/posters/AACL_2025_SRW_45.pdf"
 ---
-
-**First Author | Accepted**
-
-To be published at the Student Research Workshop, IJCNLP-AACL 2025.
 
 ## Abstract
 
-Introduced a multi-hop chain-of-thought framework for bidirectional sarcasm style transfer, leveraging Theory of Mind. Benchmarked 6 SLMs on sarcasm generation and removal using the MUSTARD dataset (690 dialogues). Evaluated with automatic (BLEU, DialogRPT, SBERT, BERTScore), LLM-as-a-judge and human judgements (5 annotators, 60 cases). Improved metrics by up to 12% over few-shot baselines and won top human rankings across all four style directions. Ranked best in all 4 tasks, with Krippendorff's alpha 0.45, excelling in context, creativity, meaning preservation and sarcasticness.
+Sarcasm is a specific form of ironic speech
+which can often be hard to understand for language models due to its nuanced nature. Recent
+improvements in the ability of such models to
+detect and generate sarcasm motivate us to try a
+new approach to help language models perceive
+sarcasm as a speech style, through a human cognitive perspective. In this work, we propose a
+multi-hop Chain of Thought (CoT) methodology to understand the context of an utterance
+that follows a dialogue and to perform bidirectional style transfer on that utterance, leveraging the Theory of Mind. We use small language
+models (SLMs) due to their cost-efficiency and
+fast response-time. The generated utterances
+are evaluated using both LLM-as-a-judge and
+human evaluation, suitable to the open-ended
+and stylistic nature of the generations. We also
+evaluate scores of automated metrics such as
+DialogRPT, BLEU and SBERT; drawing valuable insights from them that support our evidence. Based on this, we find that our cognitive
+approach to sarcasm is an effective way for language models to stylistically understand and
+generate sarcasm with better authenticity.
 
 

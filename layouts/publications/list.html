@@ -71,11 +71,16 @@
         {{- end }}
       </div>
     </header>
+    {{- if or .Params.editPost.URL .Params.poster }}
     <div class="publication-links">
       {{- if .Params.editPost.URL }}
-      <a href="{{ .Params.editPost.URL }}" target="_blank" rel="noopener" class="publication-link-pdf">PDF</a>
+      <a href="{{ .Params.editPost.URL }}" target="_blank" rel="noopener noreferrer" class="publication-link-pdf">PDF</a>
+      {{- end }}
+      {{- with .Params.poster }}
+      <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="publication-link-poster">Poster</a>
       {{- end }}
     </div>
+    {{- end }}
   </article>
   </li>
   {{- end }}

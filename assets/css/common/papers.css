@@ -137,9 +137,14 @@
     margin-top: 12px;
     padding-top: 12px;
     border-top: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
 }
 
-.publication-link-pdf {
+.publication-link-pdf,
+.publication-link-poster {
     color: var(--darkcolor);
     text-decoration: none;
     font-size: 0.9rem;
@@ -152,19 +157,35 @@
     border: 1px solid var(--border);
 }
 
-.publication-link-pdf:hover {
+.publication-link-pdf:hover,
+.publication-link-poster:hover {
     color: var(--primary);
     background: var(--tertiary);
     border-color: var(--darkcolor);
 }
 
-.dark .publication-link-pdf {
+.dark .publication-link-pdf,
+.dark .publication-link-poster {
     background: var(--code-bg);
 }
 
-.dark .publication-link-pdf:hover {
+.dark .publication-link-pdf:hover,
+.dark .publication-link-poster:hover {
     background: var(--tertiary);
     border-color: var(--lightcolor);
+}
+
+.publication-venue-single {
+    font-style: italic;
+}
+
+.post-meta .publication-single-links {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.65em;
+    margin-left: 0.65em;
+    vertical-align: middle;
 }
 
 /* Responsive */

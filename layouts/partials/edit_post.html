@@ -1,8 +1,32 @@
-{{- if and (or .Params.editPost.URL site.Params.editPost.URL) (not (.Param "editPost.disabled")) -}}
+{{- $hasEditURL := or .Params.editPost.URL site.Params.editPost.URL -}}
+{{- $hasEditText := or .Params.editPost.Text site.Params.editPost.Text -}}
+{{- $hasPoster := .Params.poster -}}
+{{- if not (.Param "editPost.disabled") -}}
+{{- if eq .Section "publications" -}}
+{{- if or $hasEditURL $hasEditText $hasPoster -}}
+{{- $fileUrlPath := path.Join .File.Path -}}
+{{- if or .Params.author site.Params.author (.Param "ShowReadingTime") (not .Date.IsZero) .IsTranslated }}&nbsp;&middot;&nbsp;{{- end -}}
+{{- with (.Params.editPost.Text | default site.Params.editPost.Text) -}}
+<span class="publication-venue-single">{{ . }}</span>
+{{- end -}}
+<br><br>
+{{- if or $hasEditURL $hasPoster -}}
+<span class="publication-single-links">
+{{- if $hasEditURL -}}
+<a href="{{ .Params.editPost.URL | default site.Params.editPost.URL }}{{ if .Params.editPost.appendFilePath | default ( site.Params.editPost.appendFilePath | default false ) }}/{{ $fileUrlPath }}{{ end }}" rel="noopener noreferrer" target="_blank" class="publication-link-pdf publication-link-pdf--single">PDF</a>
+{{- end -}}
+{{- with .Params.poster -}}
+<a href="{{ . }}" rel="noopener noreferrer" target="_blank" class="publication-link-poster publication-link-poster--single">Poster</a>
+{{- end -}}
+</span>
+{{- end -}}
+{{- end -}}
+{{- else if and $hasEditURL -}}
 {{- $fileUrlPath := path.Join .File.Path }}
 
 {{- if or .Params.author site.Params.author (.Param "ShowReadingTime") (not .Date.IsZero) .IsTranslated }}&nbsp;&middot;&nbsp;{{- end -}}
 <a href="{{ .Params.editPost.URL | default site.Params.editPost.URL }}{{ if .Params.editPost.appendFilePath | default ( site.Params.editPost.appendFilePath | default false ) }}/{{ $fileUrlPath }}{{ end }}" rel="noopener noreferrer" target="_blank">
     {{- .Params.editPost.Text | default (site.Params.editPost.Text | default (i18n "edit_post" | default "Edit")) -}}
 </a>
-{{- end }}
+{{- end -}}
+{{- end -}}
