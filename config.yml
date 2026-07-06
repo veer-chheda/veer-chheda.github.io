@@ -18,9 +18,9 @@ menu:
         - name: Publications
           url: publications/
           weight: 1
-        - name: Blog
-          url: blog/
-          weight: 2
+        # - name: Blog
+        #   url: blog/
+        #   weight: 2
         - name: CV
           url: cv.pdf
           weight: 3
@@ -112,7 +112,7 @@ params:
     
     # Blog section configuration
     blog:
-      enabled: true
+      enabled: false
       title: "Latest Posts"
       limit: 5
 
