@@ -52,7 +52,7 @@ params:
     profileMode:
           enabled: true
           title: Veer Chheda
-          subtitle: "Hi, I am an undergraduate student in Computer Science and Engineering at Dwarkadas J. Sanghvi College of Engineering. I am an aspiring researcher broadly interested in building trustworthy and human-centric AI. Previously, I interned at IIT Patna working on small object detection, hallucination detection and mitigation, and multimodal generation.  You can find a list of my broadly interested research interests below. Feel free to reach out to me :)"
+          subtitle: "Hi, I am an incoming MSCS student at Georgia Institute of Technology. I am an aspiring researcher broadly interested in building trustworthy and human-centric AI. Previously, I interned at IIT Patna working on small object detection, hallucination detection and mitigation, and multimodal generation.  You can find a list of my broadly interested research interests below. Feel free to reach out to me :)"
           imageUrl: "picture.jpeg"
           imageWidth: 200
           imageHeight: 200
