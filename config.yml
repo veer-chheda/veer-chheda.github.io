@@ -96,7 +96,8 @@ params:
       enabled: true
       title: "News"
       items:
-
+        - date: "Aug 2026"
+          content: "I will be attending Georgia Tech for my masters in CS. Go Jackets!"
         - date: "Dec 2025"
           content: "I was awarded the D&I subsidy at IJCNLP-AACL 2025! See you at IIT Bombay!"
         - date: "Oct 2025"
