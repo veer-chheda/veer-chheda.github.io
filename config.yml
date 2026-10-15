@@ -96,6 +96,7 @@ params:
       enabled: true
       title: "News"
       items:
+        - date: "'The Geometry of Personality in Language Models' was accepted at the Findings of IJCNLP-AACL 2026!"
         - date: "Aug 2026"
           content: "I will be attending Georgia Tech for my masters in CS. Go Jackets!"
         - date: "Dec 2025"
